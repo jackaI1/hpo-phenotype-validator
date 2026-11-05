@@ -1,0 +1,23 @@
+{
+  "ontology_version": "hp/releases/2026-09-01",
+  "terms": 20482,
+  "active_terms": 19894,
+  "obsolete_terms": 588,
+  "phenotype_terms": 19177,
+  "eval": {
+    "total": 40,
+    "mappable": 26,
+    "expected_unmapped": 14,
+    "accepted": 18,
+    "correct_accepted": 18,
+    "abstained": 22,
+    "correct_decisions": 32,
+    "correct_abstentions": 14,
+    "precision": 1.0,
+    "coverage": 0.45,
+    "mapping_recall": 0.6923076923076923,
+    "exact_decision_accuracy": 0.8,
+    "top3_correct": 26,
+    "top3_recall": 1.0
+  }
+}

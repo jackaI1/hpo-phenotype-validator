@@ -1,0 +1,119 @@
+{
+  "subject_id": "fictional-demo",
+  "fictional": true,
+  "ontology_version": "hp/releases/2026-09-01",
+  "ontology_sha256": "93dace952fcb3ec4728818857f6ba76bc2d5312f4d83266519b8694b8e798f22",
+  "rows": [
+    {
+      "index": 0,
+      "input": {
+        "id": "HP:0000487"
+      },
+      "resolution": {
+        "id": "HP:0000486",
+        "status": "replaced",
+        "path": [
+          "HP:0000487",
+          "HP:0000486"
+        ],
+        "suggestions": []
+      }
+    },
+    {
+      "index": 1,
+      "input": {
+        "id": "HP:0001250"
+      },
+      "resolution": {
+        "id": "HP:0001250",
+        "status": "current",
+        "path": [
+          "HP:0001250"
+        ],
+        "suggestions": []
+      }
+    },
+    {
+      "index": 2,
+      "input": {
+        "id": "HP:0002069"
+      },
+      "resolution": {
+        "id": "HP:0002069",
+        "status": "current",
+        "path": [
+          "HP:0002069"
+        ],
+        "suggestions": []
+      }
+    },
+    {
+      "index": 3,
+      "input": {
+        "text": "Low muscle tone"
+      },
+      "resolution": {
+        "id": "HP:0001252",
+        "status": "exact",
+        "score": 1.0,
+        "candidates": [
+          {
+            "id": "HP:0001252",
+            "label": "Hypotonia",
+            "score": 1.0,
+            "matched_text": "low muscle tone"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "input": {
+        "id": "HP:0001251",
+        "excluded": true
+      },
+      "resolution": {
+        "id": "HP:0001251",
+        "status": "current",
+        "path": [
+          "HP:0001251"
+        ],
+        "suggestions": []
+      }
+    }
+  ],
+  "review_rows": [],
+  "duplicates": [],
+  "redundant_pairs": [
+    {
+      "ancestor": "HP:0001250",
+      "descendant": "HP:0002069",
+      "excluded": false,
+      "removed": "HP:0001250"
+    }
+  ],
+  "contradictions": [],
+  "cleaned": [
+    {
+      "id": "HP:0000486",
+      "label": "Strabismus",
+      "excluded": false
+    },
+    {
+      "id": "HP:0001251",
+      "label": "Ataxia",
+      "excluded": true
+    },
+    {
+      "id": "HP:0001252",
+      "label": "Hypotonia",
+      "excluded": false
+    },
+    {
+      "id": "HP:0002069",
+      "label": "Bilateral tonic-clonic seizure",
+      "excluded": false
+    }
+  ],
+  "exportable": true
+}

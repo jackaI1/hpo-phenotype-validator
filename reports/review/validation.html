@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>Fictional subject: fictional-demo</title><style>
+body{font:17px/1.6 system-ui,sans-serif;max-width:1100px;margin:40px auto;padding:0 24px;
+color:#172b35;background:#fbfcfa}h1,h2{line-height:1.2}h1{color:#205e54}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:10px;text-align:left;
+border-bottom:1px solid #c8d8d1;vertical-align:top;overflow-wrap:anywhere}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#edf3ef;padding:16px}
+a{color:#205e54}.scroll{overflow-x:auto}small{color:#465c65}
+</style><main><h1>Fictional subject: fictional-demo</h1>
+<p><strong>Review required; export blocked</strong>. This is a fictional example, not medical advice.</p>
+<p>HPO version: hp/releases/2026-09-01. Confidence scores describe lexical
+similarity, not clinical probability. Only unique exact labels and exact synonyms map automatically.</p>
+<p>Unresolved rows: 4; contradictions: 2;
+redundant pairs: 1; duplicate rows: 2.</p>
+<h2>Every input row</h2><div class="scroll"><table><thead><tr>
+<th>Row (zero-based)</th><th>Input</th><th>Assertion</th><th>Decision</th><th>Accepted ID</th>
+<th>Suggestions</th></tr></thead><tbody><tr><td>0</td><td>HP:0000487</td><td>Present</td><td>replaced</td><td>HP:0000486</td><td>[]</td></tr><tr><td>1</td><td>HP:0001250</td><td>Present</td><td>current</td><td>HP:0001250</td><td>[]</td></tr><tr><td>2</td><td>HP:0002069</td><td>Present</td><td>current</td><td>HP:0002069</td><td>[]</td></tr><tr><td>3</td><td>Seizures</td><td>Present</td><td>exact</td><td>HP:0001250</td><td>[{&quot;id&quot;: &quot;HP:0001250&quot;, &quot;label&quot;: &quot;Seizure&quot;, &quot;score&quot;: 1.0, &quot;matched_text&quot;: &quot;seizures&quot;}]</td></tr><tr><td>4</td><td>HP:0001275</td><td>Present</td><td>alternative</td><td>HP:0001250</td><td>[]</td></tr><tr><td>5</td><td>HP:0001250</td><td>Excluded</td><td>current</td><td>HP:0001250</td><td>[]</td></tr><tr><td>6</td><td>microcephly</td><td>Present</td><td>review</td><td>Unmapped</td><td>[{&quot;id&quot;: &quot;HP:0000252&quot;, &quot;label&quot;: &quot;Microcephaly&quot;, &quot;score&quot;: 0.9565, &quot;matched_text&quot;: &quot;microcephaly&quot;}, {&quot;id&quot;: &quot;HP:0000256&quot;, &quot;label&quot;: &quot;Macrocephaly&quot;, &quot;score&quot;: 0.8696, &quot;matched_text&quot;: &quot;macrocephaly&quot;}, {&quot;id&quot;: &quot;HP:0040196&quot;, &quot;label&quot;: &quot;Mild microcephaly&quot;, &quot;score&quot;: 0.7857, &quot;matched_text&quot;: &quot;mild microcephaly&quot;}]</td></tr><tr><td>7</td><td>Low muscle tone</td><td>Present</td><td>exact</td><td>HP:0001252</td><td>[{&quot;id&quot;: &quot;HP:0001252&quot;, &quot;label&quot;: &quot;Hypotonia&quot;, &quot;score&quot;: 1.0, &quot;matched_text&quot;: &quot;low muscle tone&quot;}]</td></tr><tr><td>8</td><td>HP:0000489</td><td>Present</td><td>obsolete_review</td><td>Unmapped</td><td>[&quot;HP:0100886&quot;, &quot;HP:0100887&quot;]</td></tr><tr><td>9</td><td>HP:9999999</td><td>Present</td><td>unknown</td><td>Unmapped</td><td>[]</td></tr><tr><td>10</td><td>HP:0000006</td><td>Present</td><td>not_phenotype</td><td>Unmapped</td><td>[]</td></tr></tbody></table></div>
+<h2>Contradictions and redundant pairs</h2>
+<pre>{
+  &quot;contradictions&quot;: [
+    {
+      &quot;present&quot;: &quot;HP:0001250&quot;,
+      &quot;excluded&quot;: &quot;HP:0001250&quot;
+    },
+    {
+      &quot;present&quot;: &quot;HP:0002069&quot;,
+      &quot;excluded&quot;: &quot;HP:0001250&quot;
+    }
+  ],
+  &quot;redundant_pairs&quot;: [
+    {
+      &quot;ancestor&quot;: &quot;HP:0001250&quot;,
+      &quot;descendant&quot;: &quot;HP:0002069&quot;,
+      &quot;excluded&quot;: false,
+      &quot;removed&quot;: &quot;HP:0001250&quot;
+    }
+  ]
+}</pre>
+<h2>Cleaned features</h2><p>These are provisional while review is required. Correct the source
+JSON and rerun to export; the tool does not choose between conflicting assertions.</p>
+<pre>[
+  {
+    &quot;id&quot;: &quot;HP:0000486&quot;,
+    &quot;label&quot;: &quot;Strabismus&quot;,
+    &quot;excluded&quot;: false
+  },
+  {
+    &quot;id&quot;: &quot;HP:0001250&quot;,
+    &quot;label&quot;: &quot;Seizure&quot;,
+    &quot;excluded&quot;: true
+  },
+  {
+    &quot;id&quot;: &quot;HP:0001252&quot;,
+    &quot;label&quot;: &quot;Hypotonia&quot;,
+    &quot;excluded&quot;: false
+  },
+  {
+    &quot;id&quot;: &quot;HP:0002069&quot;,
+    &quot;label&quot;: &quot;Bilateral tonic-clonic seizure&quot;,
+    &quot;excluded&quot;: false
+  }
+]</pre>
+<h2>Audit trail</h2><p>Includes replacement paths, review rows and ontology checksum.</p>
+<pre>{
+  &quot;subject_id&quot;: &quot;fictional-demo&quot;,
+  &quot;fictional&quot;: true,
+  &quot;ontology_version&quot;: &quot;hp/releases/2026-09-01&quot;,
+  &quot;ontology_sha256&quot;: &quot;93dace952fcb3ec4728818857f6ba76bc2d5312f4d83266519b8694b8e798f22&quot;,
+  &quot;rows&quot;: [
+    {
+      &quot;index&quot;: 0,
+      &quot;input&quot;: {
+        &quot;id&quot;: &quot;HP:0000487&quot;
+      },
+      &quot;resolution&quot;: {
+        &quot;id&quot;: &quot;HP:0000486&quot;,
+        &quot;status&quot;: &quot;replaced&quot;,
+        &quot;path&quot;: [
+          &quot;HP:0000487&quot;,
+          &quot;HP:0000486&quot;
+        ],
+        &quot;suggestions&quot;: []
+      }
+    },
+    {
+      &quot;index&quot;: 1,
+      &quot;input&quot;: {
+        &quot;id&quot;: &quot;HP:0001250&quot;
+      },
+      &quot;resolution&quot;: {
+        &quot;id&quot;: &quot;HP:0001250&quot;,
+        &quot;status&quot;: &quot;current&quot;,
+        &quot;path&quot;: [
+          &quot;HP:0001250&quot;
+        ],
+        &quot;suggestions&quot;: []
+      }
+    },
+    {
+      &quot;index&quot;: 2,
+      &quot;input&quot;: {
+        &quot;id&quot;: &quot;HP:0002069&quot;
+      },
+      &quot;resolution&quot;: {
+        &quot;id&quot;: &quot;HP:0002069&quot;,
+        &quot;status&quot;: &quot;current&quot;,
+        &quot;path&quot;: [
+          &quot;HP:0002069&quot;
+        ],
+        &quot;suggestions&quot;: []
+      }
+    },
+    {
+      &quot;index&quot;: 3,
+      &quot;input&quot;: {
+        &quot;text&quot;: &quot;Seizures&quot;
+      },
+      &quot;resolution&quot;: {
+        &quot;id&quot;: &quot;HP:0001250&quot;,
+        &quot;status&quot;: &quot;exact&quot;,
+        &quot;score&quot;: 1.0,
+        &quot;candidates&quot;: [
+          {
+            &quot;id&quot;: &quot;HP:0001250&quot;,
+            &quot;label&quot;: &quot;Seizure&quot;,
+            &quot;score&quot;: 1.0,
+            &quot;matched_text&quot;: &quot;seizures&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;index&quot;: 4,
+      &quot;input&quot;: {
+        &quot;id&quot;: &quot;HP:0001275&quot;
+      },
+      &quot;resolution&quot;: {
+        &quot;id&quot;: &quot;HP:0001250&quot;,
+        &quot;status&quot;: &quot;alternative&quot;,
+        &quot;path&quot;: [
+          &quot;HP:0001275&quot;,
+          &quot;HP:0001250&quot;
+        ],
+        &quot;suggestions&quot;: []
+      }
+    },
+    {
+      &quot;index&quot;: 5,
+      &quot;input&quot;: {
+        &quot;id&quot;: &quot;HP:0001250&quot;,
+        &quot;excluded&quot;: true
+      },
+      &quot;resolution&quot;: {
+        &quot;id&quot;: &quot;HP:0001250&quot;,
+        &quot;status&quot;: &quot;current&quot;,
+        &quot;path&quot;: [
+          &quot;HP:0001250&quot;
+        ],
+        &quot;suggestions&quot;: []
+      }
+    },
+    {
+      &quot;index&quot;: 6,
+      &quot;input&quot;: {
+        &quot;text&quot;: &quot;microcephly&quot;
+      },
+      &quot;resolution&quot;: {
+        &quot;id&quot;: null,
+        &quot;status&quot;: &quot;review&quot;,
+        &quot;score&quot;: 0.9565,
+        &quot;candidates&quot;: [
+          {
+            &quot;id&quot;: &quot;HP:0000252&quot;,
+            &quot;label&quot;: &quot;Microcephaly&quot;,
+            &quot;score&quot;: 0.9565,
+            &quot;matched_text&quot;: &quot;microcephaly&quot;
+          },
+          {
+            &quot;id&quot;: &quot;HP:0000256&quot;,
+            &quot;label&quot;: &quot;Macrocephaly&quot;,
+            &quot;score&quot;: 0.8696,
+            &quot;matched_text&quot;: &quot;macrocephaly&quot;
+          },
+          {
+            &quot;id&quot;: &quot;HP:0040196&quot;,
+            &quot;label&quot;: &quot;Mild microcephaly&quot;,
+            &quot;score&quot;: 0.7857,
+            &quot;matched_text&quot;: &quot;mild microcephaly&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;index&quot;: 7,
+      &quot;input&quot;: {
+        &quot;text&quot;: &quot;Low muscle tone&quot;
+      },
+      &quot;resolution&quot;: {
+        &quot;id&quot;: &quot;HP:0001252&quot;,
+        &quot;status&quot;: &quot;exact&quot;,
+        &quot;score&quot;: 1.0,
+        &quot;candidates&quot;: [
+          {
+            &quot;id&quot;: &quot;HP:0001252&quot;,
+            &quot;label&quot;: &quot;Hypotonia&quot;,
+            &quot;score&quot;: 1.0,
+            &quot;matched_text&quot;: &quot;low muscle tone&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;index&quot;: 8,
+      &quot;input&quot;: {
+        &quot;id&quot;: &quot;HP:0000489&quot;
+      },
+      &quot;resolution&quot;: {
+        &quot;id&quot;: null,
+        &quot;status&quot;: &quot;obsolete_review&quot;,
+        &quot;path&quot;: [
+          &quot;HP:0000489&quot;
+        ],
+        &quot;suggestions&quot;: [
+          &quot;HP:0100886&quot;,
+          &quot;HP:0100887&quot;
+        ]
+      }
+    },
+    {
+      &quot;index&quot;: 9,
+      &quot;input&quot;: {
+        &quot;id&quot;: &quot;HP:9999999&quot;
+      },
+      &quot;resolution&quot;: {
+        &quot;id&quot;: null,
+        &quot;status&quot;: &quot;unknown&quot;,
+        &quot;path&quot;: [
+          &quot;HP:9999999&quot;
+        ],
+        &quot;suggestions&quot;: []
+      }
+    },
+    {
+      &quot;index&quot;: 10,
+      &quot;input&quot;: {
+        &quot;id&quot;: &quot;HP:0000006&quot;
+      },
+      &quot;resolution&quot;: {
+        &quot;id&quot;: null,
+        &quot;status&quot;: &quot;not_phenotype&quot;,
+        &quot;path&quot;: [
+          &quot;HP:0000006&quot;
+        ],
+        &quot;suggestions&quot;: []
+      }
+    }
+  ],
+  &quot;review_rows&quot;: [
+    6,
+    8,
+    9,
+    10
+  ],
+  &quot;duplicates&quot;: [
+    3,
+    4
+  ],
+  &quot;redundant_pairs&quot;: [
+    {
+      &quot;ancestor&quot;: &quot;HP:0001250&quot;,
+      &quot;descendant&quot;: &quot;HP:0002069&quot;,
+      &quot;excluded&quot;: false,
+      &quot;removed&quot;: &quot;HP:0001250&quot;
+    }
+  ],
+  &quot;contradictions&quot;: [
+    {
+      &quot;present&quot;: &quot;HP:0001250&quot;,
+      &quot;excluded&quot;: &quot;HP:0001250&quot;
+    },
+    {
+      &quot;present&quot;: &quot;HP:0002069&quot;,
+      &quot;excluded&quot;: &quot;HP:0001250&quot;
+    }
+  ],
+  &quot;cleaned&quot;: [
+    {
+      &quot;id&quot;: &quot;HP:0000486&quot;,
+      &quot;label&quot;: &quot;Strabismus&quot;,
+      &quot;excluded&quot;: false
+    },
+    {
+      &quot;id&quot;: &quot;HP:0001250&quot;,
+      &quot;label&quot;: &quot;Seizure&quot;,
+      &quot;excluded&quot;: true
+    },
+    {
+      &quot;id&quot;: &quot;HP:0001252&quot;,
+      &quot;label&quot;: &quot;Hypotonia&quot;,
+      &quot;excluded&quot;: false
+    },
+    {
+      &quot;id&quot;: &quot;HP:0002069&quot;,
+      &quot;label&quot;: &quot;Bilateral tonic-clonic seizure&quot;,
+      &quot;excluded&quot;: false
+    }
+  ],
+  &quot;exportable&quot;: false
+}</pre></main></html>
