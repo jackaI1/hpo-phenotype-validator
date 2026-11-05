@@ -1,0 +1,75 @@
+# Phrase mapping report
+
+I checked an authored, hand-labelled English phrase sample against the bundled HPO. All subject lists are fictional. This is a small regression benchmark, not an independent clinical validation.
+
+Ontology: `hp/releases/2026-09-01`. SHA-256: `93dace952fcb3ec4728818857f6ba76bc2d5312f4d83266519b8694b8e798f22`.
+
+Unique normalized preferred label or EXACT synonym only; all fuzzy suggestions require review. Scores are lexical similarity, not probabilities.
+
+| Split | Phrases | Accepted | Correct accepted | Precision | Coverage | Exact decision accuracy | Top-3 recall |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| dev | 8 | 5 | 5 | 100.0% | 62.5% | 100.0% | 100.0% |
+| eval | 40 | 18 | 18 | 100.0% | 45.0% | 80.0% | 100.0% |
+
+Precision = correct accepted IDs / accepted IDs. Coverage = accepted phrases / all phrases. Exact decision accuracy counts the correct ID or a correct abstention when the gold label is empty. Top-3 recall counts gold IDs among the first three suggestions / phrases with a gold ID. The JSON report also includes mapping recall and counts for every denominator.
+
+Development and evaluation rows were labelled before running the matcher. There is no trained model or fitted threshold. The author also wrote the matcher, so the evaluation rows are not a blinded independent test. Label and synonym lookups intentionally overlap the public dictionary. Paraphrases expose the limits of lexical matching. See [sample protocol](../docs/evaluation.md) and [every prediction](mapping.json).
+
+## Every phrase
+
+| Split | Phrase | Expected | Accepted | Score | Best suggestion | Decision |
+| --- | --- | --- | --- | ---: | --- | --- |
+| dev | Seizure | HP:0001250 | HP:0001250 | 1.0 | HP:0001250 | exact |
+| dev | Low muscle tone | HP:0001252 | HP:0001252 | 1.0 | HP:0001252 | exact |
+| dev | Cerebellar ataxia | HP:0001251 | HP:0001251 | 1.0 | HP:0001251 | exact |
+| dev | Short stature | HP:0004322 | HP:0004322 | 1.0 | HP:0004322 | exact |
+| dev | Microcephaly | HP:0000252 | HP:0000252 | 1.0 | HP:0000252 | exact |
+| dev | no seizures | unmapped | unmapped | 0.0 | unmapped | context_review |
+| dev | feels strange | unmapped | unmapped | 0.6957 | HP:0031590 | review |
+| dev | possible seizure | unmapped | unmapped | 0.0 | unmapped | context_review |
+| eval | Seizures | HP:0001250 | HP:0001250 | 1.0 | HP:0001250 | exact |
+| eval | Epileptic seizure | HP:0001250 | HP:0001250 | 1.0 | HP:0001250 | exact |
+| eval | Hypotonia | HP:0001252 | HP:0001252 | 1.0 | HP:0001252 | exact |
+| eval | Muscle hypotonia | HP:0001252 | HP:0001252 | 1.0 | HP:0001252 | exact |
+| eval | Ataxia | HP:0001251 | HP:0001251 | 1.0 | HP:0001251 | exact |
+| eval | Global developmental delay | HP:0001263 | HP:0001263 | 1.0 | HP:0001263 | exact |
+| eval | Abnormally small cranium | HP:0000252 | HP:0000252 | 1.0 | HP:0000252 | exact |
+| eval | Impaired vision | HP:0000505 | HP:0000505 | 1.0 | HP:0000505 | exact |
+| eval | Retinal dystrophy | HP:0000556 | HP:0000556 | 1.0 | HP:0000556 | exact |
+| eval | Hearing impairment | HP:0000365 | HP:0000365 | 1.0 | HP:0000365 | exact |
+| eval | Atrial septal defect | HP:0001631 | HP:0001631 | 1.0 | HP:0001631 | exact |
+| eval | Ventricular septal defect | HP:0001629 | HP:0001629 | 1.0 | HP:0001629 | exact |
+| eval | Intellectual disability | HP:0001249 | HP:0001249 | 1.0 | HP:0001249 | exact |
+| eval | Joint hypermobility | HP:0001382 | HP:0001382 | 1.0 | HP:0001382 | exact |
+| eval | Muscular weakness | HP:0001324 | HP:0001324 | 1.0 | HP:0001324 | exact |
+| eval | Vomiting | HP:0002013 | HP:0002013 | 1.0 | HP:0002013 | exact |
+| eval | Fever | HP:0001945 | HP:0001945 | 1.0 | HP:0001945 | exact |
+| eval | Easy bruising | HP:0000978 | HP:0000978 | 1.0 | HP:0000978 | exact |
+| eval | seizurre | HP:0001250 | unmapped | 0.9333 | HP:0001250 | review |
+| eval | short statur | HP:0004322 | unmapped | 0.96 | HP:0004322 | review |
+| eval | microcephly | HP:0000252 | unmapped | 0.9565 | HP:0000252 | review |
+| eval | hypotnia | HP:0001252 | unmapped | 0.9412 | HP:0001252 | review |
+| eval | poor eyesight | HP:0000505 | unmapped | 0.7586 | HP:0000505 | review |
+| eval | low tone in muscles | HP:0001252 | unmapped | 0.6486 | HP:0012893 | review |
+| eval | unusually flexible joints | HP:0001382 | unmapped | 0.75 | HP:0001382 | review |
+| eval | delayed development across several areas | HP:0001263 | unmapped | 0.6914 | HP:0002194 | review |
+| eval | Epilepsy | unmapped | unmapped | 0.6087 | HP:0011097 | review |
+| eval | small head | unmapped | unmapped | 0.9 | HP:0200055 | review |
+| eval | not sure about seizures | unmapped | unmapped | 0.0 | unmapped | context_review |
+| eval | no seizure | unmapped | unmapped | 0.0 | unmapped | context_review |
+| eval | denies low muscle tone | unmapped | unmapped | 0.0 | unmapped | context_review |
+| eval | family history of seizures | unmapped | unmapped | 0.0 | unmapped | context_review |
+| eval | possible hypotonia | unmapped | unmapped | 0.0 | unmapped | context_review |
+| eval | seizure and short stature | unmapped | unmapped | 0.8 | HP:0003510 | review |
+| eval | normal examination | unmapped | unmapped | 0.7895 | HP:0012447 | review |
+| eval | feels off after lunch | unmapped | unmapped | 0.5217 | HP:0002425 | review |
+| eval | takes vitamin tablets | unmapped | unmapped | 0.6087 | HP:0008326 | review |
+| eval | follow up next month | unmapped | unmapped | 0.5556 | HP:0002714 | review |
+| eval | HP:9999999 | unmapped | unmapped | 0.2353 | HP:0000204 | review |
+| eval | blue | unmapped | unmapped | 0.6154 | HP:0000635 | review |
+
+## Fictional list walkthrough
+
+The [unresolved input](../examples/needs-review.json) becomes [a blocked report](review/validation.json). It includes obsolete and alternative identifiers, redundancy, explicit exclusions, unknown IDs and uncertain text. Review the replacement paths and candidates, then edit the source JSON. I supplied [an accepted revision](../examples/accepted.json) and [its exported Phenopacket](accepted/phenopacket.json). The accepted revision removes the contradictory exclusion and unresolved rows; it does not assert that the uncertain phrases were resolved.
+
+For formatted offline reports, download and open `review/validation.html`, `accepted/validation.html` or `mapping.html`. No installation is needed.

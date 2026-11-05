@@ -1,0 +1,246 @@
+{
+  "subject_id": "fictional-demo",
+  "fictional": true,
+  "ontology_version": "hp/releases/2026-09-01",
+  "ontology_sha256": "93dace952fcb3ec4728818857f6ba76bc2d5312f4d83266519b8694b8e798f22",
+  "rows": [
+    {
+      "index": 0,
+      "input": {
+        "id": "HP:0000487"
+      },
+      "resolution": {
+        "id": "HP:0000486",
+        "status": "replaced",
+        "path": [
+          "HP:0000487",
+          "HP:0000486"
+        ],
+        "suggestions": []
+      }
+    },
+    {
+      "index": 1,
+      "input": {
+        "id": "HP:0001250"
+      },
+      "resolution": {
+        "id": "HP:0001250",
+        "status": "current",
+        "path": [
+          "HP:0001250"
+        ],
+        "suggestions": []
+      }
+    },
+    {
+      "index": 2,
+      "input": {
+        "id": "HP:0002069"
+      },
+      "resolution": {
+        "id": "HP:0002069",
+        "status": "current",
+        "path": [
+          "HP:0002069"
+        ],
+        "suggestions": []
+      }
+    },
+    {
+      "index": 3,
+      "input": {
+        "text": "Seizures"
+      },
+      "resolution": {
+        "id": "HP:0001250",
+        "status": "exact",
+        "score": 1.0,
+        "candidates": [
+          {
+            "id": "HP:0001250",
+            "label": "Seizure",
+            "score": 1.0,
+            "matched_text": "seizures"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "input": {
+        "id": "HP:0001275"
+      },
+      "resolution": {
+        "id": "HP:0001250",
+        "status": "alternative",
+        "path": [
+          "HP:0001275",
+          "HP:0001250"
+        ],
+        "suggestions": []
+      }
+    },
+    {
+      "index": 5,
+      "input": {
+        "id": "HP:0001250",
+        "excluded": true
+      },
+      "resolution": {
+        "id": "HP:0001250",
+        "status": "current",
+        "path": [
+          "HP:0001250"
+        ],
+        "suggestions": []
+      }
+    },
+    {
+      "index": 6,
+      "input": {
+        "text": "microcephly"
+      },
+      "resolution": {
+        "id": null,
+        "status": "review",
+        "score": 0.9565,
+        "candidates": [
+          {
+            "id": "HP:0000252",
+            "label": "Microcephaly",
+            "score": 0.9565,
+            "matched_text": "microcephaly"
+          },
+          {
+            "id": "HP:0000256",
+            "label": "Macrocephaly",
+            "score": 0.8696,
+            "matched_text": "macrocephaly"
+          },
+          {
+            "id": "HP:0040196",
+            "label": "Mild microcephaly",
+            "score": 0.7857,
+            "matched_text": "mild microcephaly"
+          }
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "input": {
+        "text": "Low muscle tone"
+      },
+      "resolution": {
+        "id": "HP:0001252",
+        "status": "exact",
+        "score": 1.0,
+        "candidates": [
+          {
+            "id": "HP:0001252",
+            "label": "Hypotonia",
+            "score": 1.0,
+            "matched_text": "low muscle tone"
+          }
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "input": {
+        "id": "HP:0000489"
+      },
+      "resolution": {
+        "id": null,
+        "status": "obsolete_review",
+        "path": [
+          "HP:0000489"
+        ],
+        "suggestions": [
+          "HP:0100886",
+          "HP:0100887"
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "input": {
+        "id": "HP:9999999"
+      },
+      "resolution": {
+        "id": null,
+        "status": "unknown",
+        "path": [
+          "HP:9999999"
+        ],
+        "suggestions": []
+      }
+    },
+    {
+      "index": 10,
+      "input": {
+        "id": "HP:0000006"
+      },
+      "resolution": {
+        "id": null,
+        "status": "not_phenotype",
+        "path": [
+          "HP:0000006"
+        ],
+        "suggestions": []
+      }
+    }
+  ],
+  "review_rows": [
+    6,
+    8,
+    9,
+    10
+  ],
+  "duplicates": [
+    3,
+    4
+  ],
+  "redundant_pairs": [
+    {
+      "ancestor": "HP:0001250",
+      "descendant": "HP:0002069",
+      "excluded": false,
+      "removed": "HP:0001250"
+    }
+  ],
+  "contradictions": [
+    {
+      "present": "HP:0001250",
+      "excluded": "HP:0001250"
+    },
+    {
+      "present": "HP:0002069",
+      "excluded": "HP:0001250"
+    }
+  ],
+  "cleaned": [
+    {
+      "id": "HP:0000486",
+      "label": "Strabismus",
+      "excluded": false
+    },
+    {
+      "id": "HP:0001250",
+      "label": "Seizure",
+      "excluded": true
+    },
+    {
+      "id": "HP:0001252",
+      "label": "Hypotonia",
+      "excluded": false
+    },
+    {
+      "id": "HP:0002069",
+      "label": "Bilateral tonic-clonic seizure",
+      "excluded": false
+    }
+  ],
+  "exportable": false
+}

@@ -1,0 +1,1120 @@
+{
+  "ontology_version": "hp/releases/2026-09-01",
+  "ontology_sha256": "93dace952fcb3ec4728818857f6ba76bc2d5312f4d83266519b8694b8e798f22",
+  "policy": "Unique normalized preferred label or EXACT synonym only; all fuzzy suggestions require review. Scores are lexical similarity, not probabilities.",
+  "splits": {
+    "dev": {
+      "total": 8,
+      "mappable": 5,
+      "expected_unmapped": 3,
+      "accepted": 5,
+      "correct_accepted": 5,
+      "abstained": 3,
+      "correct_decisions": 8,
+      "correct_abstentions": 3,
+      "precision": 1.0,
+      "coverage": 0.625,
+      "mapping_recall": 1.0,
+      "exact_decision_accuracy": 1.0,
+      "top3_correct": 5,
+      "top3_recall": 1.0
+    },
+    "eval": {
+      "total": 40,
+      "mappable": 26,
+      "expected_unmapped": 14,
+      "accepted": 18,
+      "correct_accepted": 18,
+      "abstained": 22,
+      "correct_decisions": 32,
+      "correct_abstentions": 14,
+      "precision": 1.0,
+      "coverage": 0.45,
+      "mapping_recall": 0.6923076923076923,
+      "exact_decision_accuracy": 0.8,
+      "top3_correct": 26,
+      "top3_recall": 1.0
+    }
+  },
+  "predictions": [
+    {
+      "split": "dev",
+      "phrase": "Seizure",
+      "expected_id": "HP:0001250",
+      "rationale": "Public preferred label",
+      "id": "HP:0001250",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001250",
+          "label": "Seizure",
+          "score": 1.0,
+          "matched_text": "seizure"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "dev",
+      "phrase": "Low muscle tone",
+      "expected_id": "HP:0001252",
+      "rationale": "Public exact synonym",
+      "id": "HP:0001252",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001252",
+          "label": "Hypotonia",
+          "score": 1.0,
+          "matched_text": "low muscle tone"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "dev",
+      "phrase": "Cerebellar ataxia",
+      "expected_id": "HP:0001251",
+      "rationale": "Public exact synonym",
+      "id": "HP:0001251",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001251",
+          "label": "Ataxia",
+          "score": 1.0,
+          "matched_text": "cerebellar ataxia"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "dev",
+      "phrase": "Short stature",
+      "expected_id": "HP:0004322",
+      "rationale": "Public preferred label",
+      "id": "HP:0004322",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0004322",
+          "label": "Short stature",
+          "score": 1.0,
+          "matched_text": "short stature"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "dev",
+      "phrase": "Microcephaly",
+      "expected_id": "HP:0000252",
+      "rationale": "Public preferred label",
+      "id": "HP:0000252",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0000252",
+          "label": "Microcephaly",
+          "score": 1.0,
+          "matched_text": "microcephaly"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "dev",
+      "phrase": "no seizures",
+      "expected_id": null,
+      "rationale": "Negated phrase needs explicit excluded field",
+      "id": null,
+      "status": "context_review",
+      "score": 0.0,
+      "candidates": [],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "dev",
+      "phrase": "feels strange",
+      "expected_id": null,
+      "rationale": "No single feature specified",
+      "id": null,
+      "status": "review",
+      "score": 0.6957,
+      "candidates": [
+        {
+          "id": "HP:0031590",
+          "label": "Asthenopia",
+          "score": 0.6957,
+          "matched_text": "eye strain"
+        },
+        {
+          "id": "HP:6001180",
+          "label": "Vogt striae",
+          "score": 0.5926,
+          "matched_text": "corneal striae"
+        },
+        {
+          "id": "HP:0030832",
+          "label": "Vitreous strands",
+          "score": 0.5517,
+          "matched_text": "vitreous strands"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "dev",
+      "phrase": "possible seizure",
+      "expected_id": null,
+      "rationale": "Uncertain assertion needs review",
+      "id": null,
+      "status": "context_review",
+      "score": 0.0,
+      "candidates": [],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "Seizures",
+      "expected_id": "HP:0001250",
+      "rationale": "Public exact plural synonym",
+      "id": "HP:0001250",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001250",
+          "label": "Seizure",
+          "score": 1.0,
+          "matched_text": "seizures"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Epileptic seizure",
+      "expected_id": "HP:0001250",
+      "rationale": "Public exact synonym",
+      "id": "HP:0001250",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001250",
+          "label": "Seizure",
+          "score": 1.0,
+          "matched_text": "epileptic seizure"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Hypotonia",
+      "expected_id": "HP:0001252",
+      "rationale": "Public preferred label",
+      "id": "HP:0001252",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001252",
+          "label": "Hypotonia",
+          "score": 1.0,
+          "matched_text": "hypotonia"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Muscle hypotonia",
+      "expected_id": "HP:0001252",
+      "rationale": "Public exact synonym",
+      "id": "HP:0001252",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001252",
+          "label": "Hypotonia",
+          "score": 1.0,
+          "matched_text": "muscle hypotonia"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Ataxia",
+      "expected_id": "HP:0001251",
+      "rationale": "Public preferred label",
+      "id": "HP:0001251",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001251",
+          "label": "Ataxia",
+          "score": 1.0,
+          "matched_text": "ataxia"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Global developmental delay",
+      "expected_id": "HP:0001263",
+      "rationale": "Public preferred label",
+      "id": "HP:0001263",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001263",
+          "label": "Global developmental delay",
+          "score": 1.0,
+          "matched_text": "global developmental delay"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Abnormally small cranium",
+      "expected_id": "HP:0000252",
+      "rationale": "Public exact synonym",
+      "id": "HP:0000252",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0000252",
+          "label": "Microcephaly",
+          "score": 1.0,
+          "matched_text": "abnormally small cranium"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Impaired vision",
+      "expected_id": "HP:0000505",
+      "rationale": "Public exact synonym",
+      "id": "HP:0000505",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0000505",
+          "label": "Visual impairment",
+          "score": 1.0,
+          "matched_text": "impaired vision"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Retinal dystrophy",
+      "expected_id": "HP:0000556",
+      "rationale": "Public preferred label",
+      "id": "HP:0000556",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0000556",
+          "label": "Retinal dystrophy",
+          "score": 1.0,
+          "matched_text": "retinal dystrophy"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Hearing impairment",
+      "expected_id": "HP:0000365",
+      "rationale": "Public preferred label",
+      "id": "HP:0000365",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0000365",
+          "label": "Hearing impairment",
+          "score": 1.0,
+          "matched_text": "hearing impairment"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Atrial septal defect",
+      "expected_id": "HP:0001631",
+      "rationale": "Public preferred label",
+      "id": "HP:0001631",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001631",
+          "label": "Atrial septal defect",
+          "score": 1.0,
+          "matched_text": "atrial septal defect"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Ventricular septal defect",
+      "expected_id": "HP:0001629",
+      "rationale": "Public preferred label",
+      "id": "HP:0001629",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001629",
+          "label": "Ventricular septal defect",
+          "score": 1.0,
+          "matched_text": "ventricular septal defect"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Intellectual disability",
+      "expected_id": "HP:0001249",
+      "rationale": "Public preferred label",
+      "id": "HP:0001249",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001249",
+          "label": "Intellectual disability",
+          "score": 1.0,
+          "matched_text": "intellectual disability"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Joint hypermobility",
+      "expected_id": "HP:0001382",
+      "rationale": "Public preferred label",
+      "id": "HP:0001382",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001382",
+          "label": "Joint hypermobility",
+          "score": 1.0,
+          "matched_text": "joint hypermobility"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Muscular weakness",
+      "expected_id": "HP:0001324",
+      "rationale": "Public exact synonym",
+      "id": "HP:0001324",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001324",
+          "label": "Muscle weakness",
+          "score": 1.0,
+          "matched_text": "muscular weakness"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Vomiting",
+      "expected_id": "HP:0002013",
+      "rationale": "Public preferred label",
+      "id": "HP:0002013",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0002013",
+          "label": "Vomiting",
+          "score": 1.0,
+          "matched_text": "vomiting"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Fever",
+      "expected_id": "HP:0001945",
+      "rationale": "Public preferred label",
+      "id": "HP:0001945",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0001945",
+          "label": "Fever",
+          "score": 1.0,
+          "matched_text": "fever"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Easy bruising",
+      "expected_id": "HP:0000978",
+      "rationale": "Public exact synonym",
+      "id": "HP:0000978",
+      "status": "exact",
+      "score": 1.0,
+      "candidates": [
+        {
+          "id": "HP:0000978",
+          "label": "Bruising susceptibility",
+          "score": 1.0,
+          "matched_text": "easy bruising"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "seizurre",
+      "expected_id": "HP:0001250",
+      "rationale": "Authored typo of seizure",
+      "id": null,
+      "status": "review",
+      "score": 0.9333,
+      "candidates": [
+        {
+          "id": "HP:0001250",
+          "label": "Seizure",
+          "score": 0.9333,
+          "matched_text": "seizure"
+        },
+        {
+          "id": "HP:0007359",
+          "label": "Focal-onset seizure",
+          "score": 0.6667,
+          "matched_text": "focal seizure"
+        },
+        {
+          "id": "HP:0020219",
+          "label": "Motor seizure",
+          "score": 0.6667,
+          "matched_text": "motor seizure"
+        }
+      ],
+      "correct_decision": false,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "short statur",
+      "expected_id": "HP:0004322",
+      "rationale": "Authored typo of short stature",
+      "id": null,
+      "status": "review",
+      "score": 0.96,
+      "candidates": [
+        {
+          "id": "HP:0004322",
+          "label": "Short stature",
+          "score": 0.96,
+          "matched_text": "short stature"
+        },
+        {
+          "id": "HP:0003502",
+          "label": "Mild short stature",
+          "score": 0.8,
+          "matched_text": "mild short stature"
+        },
+        {
+          "id": "HP:0400005",
+          "label": "Short ear",
+          "score": 0.7619,
+          "matched_text": "short ear"
+        }
+      ],
+      "correct_decision": false,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "microcephly",
+      "expected_id": "HP:0000252",
+      "rationale": "Authored typo of microcephaly",
+      "id": null,
+      "status": "review",
+      "score": 0.9565,
+      "candidates": [
+        {
+          "id": "HP:0000252",
+          "label": "Microcephaly",
+          "score": 0.9565,
+          "matched_text": "microcephaly"
+        },
+        {
+          "id": "HP:0000256",
+          "label": "Macrocephaly",
+          "score": 0.8696,
+          "matched_text": "macrocephaly"
+        },
+        {
+          "id": "HP:0040196",
+          "label": "Mild microcephaly",
+          "score": 0.7857,
+          "matched_text": "mild microcephaly"
+        }
+      ],
+      "correct_decision": false,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "hypotnia",
+      "expected_id": "HP:0001252",
+      "rationale": "Authored typo of hypotonia",
+      "id": null,
+      "status": "review",
+      "score": 0.9412,
+      "candidates": [
+        {
+          "id": "HP:0001252",
+          "label": "Hypotonia",
+          "score": 0.9412,
+          "matched_text": "hypotonia"
+        },
+        {
+          "id": "HP:0100754",
+          "label": "Mania",
+          "score": 0.8235,
+          "matched_text": "hypomania"
+        },
+        {
+          "id": "HP:0000668",
+          "label": "Hypodontia",
+          "score": 0.7778,
+          "matched_text": "hypodontia"
+        }
+      ],
+      "correct_decision": false,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "poor eyesight",
+      "expected_id": "HP:0000505",
+      "rationale": "Authored paraphrase of visual impairment",
+      "id": null,
+      "status": "review",
+      "score": 0.7586,
+      "candidates": [
+        {
+          "id": "HP:0000505",
+          "label": "Visual impairment",
+          "score": 0.7586,
+          "matched_text": "loss of eyesight"
+        },
+        {
+          "id": "HP:0011968",
+          "label": "Feeding difficulties",
+          "score": 0.72,
+          "matched_text": "poor feeding"
+        },
+        {
+          "id": "HP:0002465",
+          "label": "Poor speech",
+          "score": 0.6667,
+          "matched_text": "poor speech"
+        }
+      ],
+      "correct_decision": false,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "low tone in muscles",
+      "expected_id": "HP:0001252",
+      "rationale": "Authored paraphrase of hypotonia",
+      "id": null,
+      "status": "review",
+      "score": 0.6486,
+      "candidates": [
+        {
+          "id": "HP:0012893",
+          "label": "Neck muscle hypertrophy",
+          "score": 0.6486,
+          "matched_text": "large neck muscles"
+        },
+        {
+          "id": "HP:0001252",
+          "label": "Hypotonia",
+          "score": 0.619,
+          "matched_text": "low or weak muscle tone"
+        },
+        {
+          "id": "HP:0012892",
+          "label": "Facial muscle hypertrophy",
+          "score": 0.6154,
+          "matched_text": "large facial muscles"
+        }
+      ],
+      "correct_decision": false,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "unusually flexible joints",
+      "expected_id": "HP:0001382",
+      "rationale": "Authored paraphrase of joint hypermobility",
+      "id": null,
+      "status": "review",
+      "score": 0.75,
+      "candidates": [
+        {
+          "id": "HP:0001382",
+          "label": "Joint hypermobility",
+          "score": 0.75,
+          "matched_text": "flexible joints"
+        },
+        {
+          "id": "HP:5210264",
+          "label": "Unusual retinitis",
+          "score": 0.619,
+          "matched_text": "unusual retinitis"
+        },
+        {
+          "id": "HP:0000527",
+          "label": "Long eyelashes",
+          "score": 0.6122,
+          "matched_text": "unusually long eyelashes"
+        }
+      ],
+      "correct_decision": false,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "delayed development across several areas",
+      "expected_id": "HP:0001263",
+      "rationale": "Authored paraphrase of global developmental delay",
+      "id": null,
+      "status": "review",
+      "score": 0.6914,
+      "candidates": [
+        {
+          "id": "HP:0002194",
+          "label": "Delayed gross motor development",
+          "score": 0.6914,
+          "matched_text": "delayed development of gross motor skills"
+        },
+        {
+          "id": "HP:0001263",
+          "label": "Global developmental delay",
+          "score": 0.6667,
+          "matched_text": "delayed developmental milestones"
+        },
+        {
+          "id": "HP:0020003",
+          "label": "Embryo developmental arrest",
+          "score": 0.6269,
+          "matched_text": "embryo developmental arrest"
+        }
+      ],
+      "correct_decision": false,
+      "top3_correct": true
+    },
+    {
+      "split": "eval",
+      "phrase": "Epilepsy",
+      "expected_id": null,
+      "rationale": "RELATED synonym does not establish one seizure feature",
+      "id": null,
+      "status": "review",
+      "score": 0.6087,
+      "candidates": [
+        {
+          "id": "HP:0011097",
+          "label": "Epileptic spasm",
+          "score": 0.6087,
+          "matched_text": "epileptic spasm"
+        },
+        {
+          "id": "HP:0011225",
+          "label": "Epiblepharon",
+          "score": 0.6,
+          "matched_text": "epiblepharon"
+        },
+        {
+          "id": "HP:0100534",
+          "label": "Episcleritis",
+          "score": 0.6,
+          "matched_text": "episcleritis"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "small head",
+      "expected_id": null,
+      "rationale": "Size alone lacks the circumference criterion for microcephaly",
+      "id": null,
+      "status": "review",
+      "score": 0.9,
+      "candidates": [
+        {
+          "id": "HP:0200055",
+          "label": "Small hand",
+          "score": 0.9,
+          "matched_text": "small hand"
+        },
+        {
+          "id": "HP:0000350",
+          "label": "Small forehead",
+          "score": 0.8333,
+          "matched_text": "small forehead"
+        },
+        {
+          "id": "HP:0008551",
+          "label": "Microtia",
+          "score": 0.8,
+          "matched_text": "small ears"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "not sure about seizures",
+      "expected_id": null,
+      "rationale": "Uncertain negated statement",
+      "id": null,
+      "status": "context_review",
+      "score": 0.0,
+      "candidates": [],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "no seizure",
+      "expected_id": null,
+      "rationale": "Negation belongs in excluded field",
+      "id": null,
+      "status": "context_review",
+      "score": 0.0,
+      "candidates": [],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "denies low muscle tone",
+      "expected_id": null,
+      "rationale": "Negation belongs in excluded field",
+      "id": null,
+      "status": "context_review",
+      "score": 0.0,
+      "candidates": [],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "family history of seizures",
+      "expected_id": null,
+      "rationale": "Family history is not a subject feature",
+      "id": null,
+      "status": "context_review",
+      "score": 0.0,
+      "candidates": [],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "possible hypotonia",
+      "expected_id": null,
+      "rationale": "Uncertain assertion",
+      "id": null,
+      "status": "context_review",
+      "score": 0.0,
+      "candidates": [],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "seizure and short stature",
+      "expected_id": null,
+      "rationale": "Multiple findings need separate rows",
+      "id": null,
+      "status": "review",
+      "score": 0.8,
+      "candidates": [
+        {
+          "id": "HP:0003510",
+          "label": "Severe short stature",
+          "score": 0.8,
+          "matched_text": "severe short stature"
+        },
+        {
+          "id": "HP:0003502",
+          "label": "Mild short stature",
+          "score": 0.7442,
+          "matched_text": "mild short stature"
+        },
+        {
+          "id": "HP:0008848",
+          "label": "Moderately short stature",
+          "score": 0.7234,
+          "matched_text": "moderate short stature"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "normal examination",
+      "expected_id": null,
+      "rationale": "No abnormal feature specified",
+      "id": null,
+      "status": "review",
+      "score": 0.7895,
+      "candidates": [
+        {
+          "id": "HP:0012447",
+          "label": "Abnormal myelination",
+          "score": 0.7895,
+          "matched_text": "abnormal myelination"
+        },
+        {
+          "id": "HP:0012244",
+          "label": "Abnormal sex determination",
+          "score": 0.7727,
+          "matched_text": "abnormal sex determination"
+        },
+        {
+          "id": "HP:5200010",
+          "label": "Abnormal Intonation",
+          "score": 0.7568,
+          "matched_text": "abnormal intonation"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "feels off after lunch",
+      "expected_id": null,
+      "rationale": "No specific phenotype",
+      "id": null,
+      "status": "review",
+      "score": 0.5217,
+      "candidates": [
+        {
+          "id": "HP:0002425",
+          "label": "Anarthria",
+          "score": 0.5217,
+          "matched_text": "loss of articulate speech"
+        },
+        {
+          "id": "HP:0002371",
+          "label": "Loss of speech",
+          "score": 0.5143,
+          "matched_text": "loss of speech"
+        },
+        {
+          "id": "HP:0033838",
+          "label": "Dysphoria",
+          "score": 0.5128,
+          "matched_text": "feeling off inside"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "takes vitamin tablets",
+      "expected_id": null,
+      "rationale": "Medication is not a phenotype",
+      "id": null,
+      "status": "review",
+      "score": 0.6087,
+      "candidates": [
+        {
+          "id": "HP:0008326",
+          "label": "Reduced circulating vitamin B6 circulating",
+          "score": 0.6087,
+          "matched_text": "reduced vitamin b6 levels"
+        },
+        {
+          "id": "HP:6001291",
+          "label": "Elevated vitamin D metabolite ratio",
+          "score": 0.6071,
+          "matched_text": "elevated vitamin d metabolite ratio"
+        },
+        {
+          "id": "HP:6000016",
+          "label": "Elevated circulating vitamin B12 concentration",
+          "score": 0.566,
+          "matched_text": "elevated serum vitamin b12 level"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "follow up next month",
+      "expected_id": null,
+      "rationale": "Administrative instruction",
+      "id": null,
+      "status": "review",
+      "score": 0.5556,
+      "candidates": [
+        {
+          "id": "HP:0002714",
+          "label": "Downturned corners of mouth",
+          "score": 0.5556,
+          "matched_text": "downturned mouth"
+        },
+        {
+          "id": "HP:0010805",
+          "label": "Upturned corners of mouth",
+          "score": 0.5294,
+          "matched_text": "upturned mouth"
+        },
+        {
+          "id": "HP:0200054",
+          "label": "Foot monodactyly",
+          "score": 0.5,
+          "matched_text": "foot monodactyly"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "HP:9999999",
+      "expected_id": null,
+      "rationale": "Identifier is invalid and not a phrase",
+      "id": null,
+      "status": "review",
+      "score": 0.2353,
+      "candidates": [
+        {
+          "id": "HP:0000204",
+          "label": "Cleft upper lip",
+          "score": 0.2353,
+          "matched_text": "harelip"
+        },
+        {
+          "id": "HP:0046505",
+          "label": "Hand pain",
+          "score": 0.2105,
+          "matched_text": "hand pain"
+        },
+        {
+          "id": "HP:0002301",
+          "label": "Hemiplegia",
+          "score": 0.2,
+          "matched_text": "hemiplegia"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": false
+    },
+    {
+      "split": "eval",
+      "phrase": "blue",
+      "expected_id": null,
+      "rationale": "Ambiguous colour with no anatomical finding",
+      "id": null,
+      "status": "review",
+      "score": 0.6154,
+      "candidates": [
+        {
+          "id": "HP:0000635",
+          "label": "Blue irides",
+          "score": 0.6154,
+          "matched_text": "blue eyes"
+        },
+        {
+          "id": "HP:0040317",
+          "label": "Blue urine",
+          "score": 0.5714,
+          "matched_text": "blue urine"
+        },
+        {
+          "id": "HP:0100814",
+          "label": "Blue nevus",
+          "score": 0.5714,
+          "matched_text": "blue nevus"
+        }
+      ],
+      "correct_decision": true,
+      "top3_correct": false
+    }
+  ]
+}
