@@ -1,19 +1,18 @@
-# HPO phenotype validator
+I merged this into my existing [lab-assay-lims project](https://github.com/jackaI1/lab-assay-lims/tree/main/projects/hpo-phenotype-validator). The current code is in `projects/hpo-phenotype-validator/` there. I kept the code here so older links still work.
 
-I built a checker for symptom lists because I found it hard to spot old codes, repeated information and conflicting entries by eye. The Human Phenotype Ontology (HPO) gives observed features, such as low muscle tone, a shared name and code. I wanted to check a list before passing it to another tool, while keeping uncertain wording visible for review.
+The move keeps the original layout, including `tests/conftest.py`, `tests/test_validation.py`, `tests/test_export_cli.py`, `tests/test_report_build.py`. I replaced the README with the report below and left out Git history, installed dependencies, caches and generated build output from the hub copy.
 
-I can update retired codes when HPO gives a clear replacement, find repeated broad and specific features, and flag a feature marked both present and absent. For phrases, I show suggested terms and a spelling similarity score. Uncertain phrases stay unmapped. Once every row is resolved, I export a Phenopacket, a standard JSON file describing a subject's features.
+The 7 test source files moved with the code. No project-specific GitHub Actions workflow was retained; the report records the omitted checks, and the test sources can be run locally from the linked folder.
 
-[Read the saved report](reports/README.md), [inspect a blocked list](reports/review/validation.json), or [open the cleaned Phenopacket](reports/accepted/phenopacket.json) without installing anything. All examples are fictional. This is a data-checking project, not a diagnostic tool.
+Other specific omissions: data/hp.obo (over 10 MB); reports/ (generated output).
 
-To try the accepted example, clone this repository and run these commands inside it with [uv](https://docs.astral.sh/uv/getting-started/installation/) installed:
+Omitted workflows: `hpo-phenotype-validator-ci.yml`: The relocated workflow did not complete successfully within the migration batch. Local test sources remain available.
 
-```sh
-uv sync --extra dev --locked
-uv run hpo-validate validate examples/accepted.json --out output-accepted
-```
+---
 
-Open `output-accepted/validation.html` to see the decisions, or use `output-accepted/phenopacket.json` in another tool. Output folders must be new or empty so an older export cannot be confused with a failed run. The validator runs offline with the bundled public ontology. Only the initial environment setup needs a download.
+# hpo-phenotype-validator
+
+I built a checker for symptom lists to learn how the underlying idea works. This is a learning project.
 
 ## How I review a list
 
@@ -32,8 +31,6 @@ A retired code follows only a single explicit replacement chain. Multiple replac
 A broad present feature is redundant when a more specific child is already present, so I keep the child. Exclusions work in the other direction: excluding a broad feature also excludes its children, so I keep the broadest exclusion. A present child contradicts an excluded parent; a present parent and excluded child can coexist. I report all pairs before removing redundancy and never choose between contradictory assertions automatically.
 
 Only a unique preferred label or exact synonym maps automatically, after normalizing case and whitespace. Shared synonyms remain ambiguous. Spelling-based suggestions always need review, even with a high score. The score measures character similarity, not the probability that a medical interpretation is correct. Negation and uncertainty stay in review rather than becoming assertions. This deliberately gives up automatic coverage to avoid guessing.
-
-## What I measured
 
 I hand-labelled an English phrase sample from public HPO names and definitions before running the matcher. It includes exact labels, synonyms, typos, paraphrases and intentionally unmappable phrases. I wrote both the labels and the matcher; this is a small authored check, not an independent clinical benchmark. No real patient notes were used.
 
@@ -77,4 +74,18 @@ uv build --quiet
 uv run python scripts/check_wheel.py
 ```
 
-The test suite currently passes 64 tests, covering obsolete and alternative IDs, graph errors, ambiguous text, exclusion direction, contradictions, strict inputs, escaped HTML, export blocking, CLI output and parsing exports with the official schema. CI runs the suite and artifact checks with Python 3.10 and 3.12 and checks an installed package outside the checkout. The repository started with no existing test suite.
+## Tests and limits
+
+There are 7 test source files in this copy. That source count does not establish an execution result. This is a source snapshot, and running it on a new machine may need environment-specific setup.
+
+
+Files omitted from this snapshot:
+
+- data/hp.obo (over 10 MB)
+
+
+Generated output omitted from this copy: reports/ (generated output). Regenerate it with the project scripts.
+
+The relocated workflow did not complete successfully within the migration batch. Local test sources remain available.
+
+No project-specific GitHub Actions workflow was retained. The local test sources remain in this folder.
