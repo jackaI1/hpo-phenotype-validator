@@ -2,7 +2,7 @@ I merged this into my existing [lab-assay-lims project](https://github.com/jacka
 
 The move keeps the original layout, including `tests/conftest.py`, `tests/test_validation.py`, `tests/test_export_cli.py`, `tests/test_report_build.py`. I replaced the README with the report below and left out Git history, installed dependencies, caches and generated build output from the hub copy.
 
-The 7 test source files moved with the code. No project-specific GitHub Actions workflow was retained; the report records the omitted checks, and the test sources can be run locally from the linked folder.
+The 7 files of test code and supporting test helpers moved with the code. No project-specific GitHub Actions workflow was retained; the report records the omitted checks, and the test sources can be run locally from the linked folder.
 
 Other specific omissions: data/hp.obo (over 10 MB); reports/ (generated output).
 
@@ -13,6 +13,8 @@ Omitted workflows: `hpo-phenotype-validator-ci.yml`: The relocated workflow did 
 # hpo-phenotype-validator
 
 I built a checker for symptom lists to learn how the underlying idea works. This is a learning project.
+
+The bundled phenotype examples are fictional.
 
 ## How I review a list
 
